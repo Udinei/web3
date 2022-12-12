@@ -1,0 +1,38 @@
+<p-messages [(value)]="mensagens"></p-messages>
+<p-panel header="Transferência Bancária">
+    <table>
+        <tr>
+            <td align="right">
+                Conta Débito:
+            </td>
+            <td>
+                <input pInputText size="10" (blur)="getConta1()" [(ngModel)]="dados.conta1"/>
+            </td>
+            <td>
+                <input pInputText size="70" [(ngModel)]="dados.desc1"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Conta Crédito:
+            </td>
+            <td>
+                <input pInputText size="10" (blur)="getConta2()" [(ngModel)]="dados.conta2"/>
+            </td>
+            <td>
+                <input pInputText size="70" [(ngModel)]="dados.desc2"/>
+            </td>
+        </tr>
+        <tr>
+            <td align="right">
+                Valor R$
+            </td>
+            <td>
+                <input pInputText size="10" [(ngModel)]="dados.valor"/>
+            </td>
+            <td>
+                <p-button label="Transferir" (click)="transferir()"></p-button>
+            </td>
+        </tr>
+    </table>
+</p-panel>
